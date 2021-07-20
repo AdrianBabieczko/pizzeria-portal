@@ -1,6 +1,6 @@
 import React from 'react';
 import MainLayout from './components/layout/MainLayout/MainLayout';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 import Login from './components/views/Login/Login';
 import Tables from './components/views/Tables/Tables';
 import Waiter from './components/views/Waiter/Waiter';
@@ -18,6 +18,7 @@ function App() {
           <Route exact path={process.env.PUBLIC_URL + '/kitchen'} component={Kitchen} />
         </Switch>
       </MainLayout>
+
     </BrowserRouter>
   );
 }
