@@ -1,6 +1,6 @@
 import React from 'react';
 import MainLayout from './components/layout/MainLayout/MainLayout';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from './components/views/Login/Login';
 import Tables from './components/views/Tables/Tables';
 import Waiter from './components/views/Waiter/Waiter';
