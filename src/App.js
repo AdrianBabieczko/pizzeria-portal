@@ -8,6 +8,8 @@ import Kitchen from './components/views/Kitchen/Kitchen';
 import { StylesProvider } from '@material-ui/core/styles';
 import { createTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
+import { Provider } from 'react-redux';
+import store from '../src/redux/store';
 
 const theme = createTheme({
   palette: {
@@ -19,21 +21,23 @@ const theme = createTheme({
 
 function App() {
   return (
-    <BrowserRouter>
-      <StylesProvider injectFirst>
-        <ThemeProvider theme={theme}>
-          <MainLayout>
-            <Switch>
-              {/* <Route exact path={`${process.env.PUBLIC_URL}/`} component={Homepage} /> */}
-              <Route exact path={process.env.PUBLIC_URL + '/login'} component={Login} />
-              <Route exact path={process.env.PUBLIC_URL + '/tables'} component={Tables} />
-              <Route exact path={process.env.PUBLIC_URL + '/waiter'} component={Waiter} />
-              <Route exact path={process.env.PUBLIC_URL + '/kitchen'} component={Kitchen} />
-            </Switch>
-          </MainLayout>
-        </ThemeProvider>
-      </StylesProvider>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <StylesProvider injectFirst>
+          <ThemeProvider theme={theme}>
+            <MainLayout>
+              <Switch>
+                {/* <Route exact path={`${process.env.PUBLIC_URL}/`} component={Homepage} /> */}
+                <Route exact path={process.env.PUBLIC_URL + '/login'} component={Login} />
+                <Route exact path={process.env.PUBLIC_URL + '/tables'} component={Tables} />
+                <Route exact path={process.env.PUBLIC_URL + '/waiter'} component={Waiter} />
+                <Route exact path={process.env.PUBLIC_URL + '/kitchen'} component={Kitchen} />
+              </Switch>
+            </MainLayout>
+          </ThemeProvider>
+        </StylesProvider>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
