@@ -52,6 +52,6 @@
 - `/kitchen`
   - wyswietlac liste zamowien w kolejnosci ich zlaozenia
   - lista musi zawierac:
-    - nr stolika (lub zamowienia zdalnego_)
+    - nr stolika (lub zamowienia zdalnego)
     - pelne info dot. zamopwinych dań
   - na liście musi byc mozliwosc oznaczenia zamowienia jako zrealizowane

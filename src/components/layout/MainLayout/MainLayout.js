@@ -10,9 +10,7 @@ const MainLayout = props => (
     <AppBar>
       <Container maxWidth='lg'>
         <Toolbar disableGutters>
-
           <PageNav />
-
         </Toolbar>
       </Container>
     </AppBar>
